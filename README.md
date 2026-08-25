@@ -27,17 +27,6 @@
 
 如果推送失败，脚本会保留已经创建的本地时间分支及其提交，方便使用同一提交重试，不会自动生成第二份快照。
 
-## AI 代理规范
-
-本仓库同时兼容 Codex 和 Claude Code：
-
-- `AGENTS.md` 是两者共用的项目规范。
-- `CLAUDE.md` 导入 `AGENTS.md`，供 Claude Code 自动加载。
-- `.agents/skills/publish/SKILL.md` 和 `.agents/skills/commit/SKILL.md` 是发布、提交技能的唯一源文件。
-- `.claude/skills/publish` 和 `.claude/skills/commit` 指向同一组技能，供 Claude Code 自动发现，避免维护重复规则。
-
-需要发布资源时，也可以直接要求 Codex 或 Claude Code 发布 `assets/` 中的完整资源快照。
-
 ## 开源协议
 
 [MIT](LICENSE)
